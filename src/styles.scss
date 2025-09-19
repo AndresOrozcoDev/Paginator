@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --background-color: #f8f9fa;
+  --text-color: #000000;   
+  --primary-color: #0d6efd;
+  --button-bg: #0d6efd;
+  --button-text: #ffffff;
+}
+
+.dark-mode {
+  --background-color: #212529;
+  --text-color: #ffffff;
+  --primary-color: #6c757d;
+  --button-bg: #6c757d;
+  --button-text: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}

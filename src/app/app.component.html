@@ -1,1 +1,3 @@
-<button type="button" class="btn btn-dark">Dark</button>
+<div [class.dark-mode]="themeService.currentMode" class="main w-100 vh-100">
+    <router-outlet></router-outlet>
+</div>
