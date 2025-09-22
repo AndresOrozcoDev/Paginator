@@ -10,6 +10,7 @@ import { ThemeService } from '../../../../core/services/theme.service';
 export class HeaderComponent {
 
   @Output() themeToggled = new EventEmitter<boolean>();
+  logoPath = 'assets/logo/favicon.png';
 
   constructor(public themeService: ThemeService) {
     this.themeService.initializeTheme();

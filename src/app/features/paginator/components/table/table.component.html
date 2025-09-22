@@ -1,3 +1,14 @@
-<div class="w-100">
-    Table
-</div>
+<table class="table w-100">
+  <thead>
+    <tr class="table-light">
+      <th>Nombre</th>
+      <th>Estado</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="cities.length > 0">
+    <tr *ngFor="let city of cities ?? []">
+      <td>{{ city.city }}</td>
+      <td>{{ city.state }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { City } from '../../types/location';
 
 @Component({
   selector: 'app-table',
@@ -7,5 +8,7 @@ import { Component } from '@angular/core';
   standalone: false
 })
 export class TableComponent {
+
+  @Input() cities: City[] = [];
 
 }

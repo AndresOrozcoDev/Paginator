@@ -1,4 +1,6 @@
-<div [class.dark-mode]="themeService.currentMode" class="w-100 vh-100 flex-col">
-    <app-header></app-header>
-    <app-table></app-table>
+<div [class.dark-mode]="themeService.currentMode" class="main w-100 vh-100 flex-col p-2 p-md-4">
+    <div class="main__dashboard p-4 rounded">
+        <app-header></app-header>
+        <app-table [cities]="cities"></app-table>
+    </div>
 </div>

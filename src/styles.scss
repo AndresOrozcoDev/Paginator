@@ -1,5 +1,6 @@
 :root {
   --background-color: #f8f9fa;
+  --background-color-light:#ffffff;
   --text-color: #000000;   
   --primary-color: #0d6efd;
   --button-bg: #0d6efd;
@@ -8,6 +9,7 @@
 
 .dark-mode {
   --background-color: #212529;
+  --background-color-light: #373839;
   --text-color: #ffffff;
   --primary-color: #6c757d;
   --button-bg: #6c757d;
