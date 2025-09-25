@@ -1,14 +1,17 @@
-<table class="table w-100">
-  <thead>
-    <tr class="table-light">
-      <th>Nombre</th>
-      <th>Estado</th>
-    </tr>
-  </thead>
-  <tbody *ngIf="cities.length > 0">
-    <tr *ngFor="let city of cities ?? []">
-      <td>{{ city.city }}</td>
-      <td>{{ city.state }}</td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-responsive h-100">
+  <table class="table w-100 table-bordered table-hover rounded">
+    <caption>List of cities</caption>
+    <thead>
+      <tr>
+        <th class="w-50">Nombre</th>
+        <th class="w-50">Estado</th>
+      </tr>
+    </thead>
+    <tbody *ngIf="cities.length > 0">
+      <tr *ngFor="let city of cities ?? []">
+        <td>{{ city.city }}</td>
+        <td>{{ city.state }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

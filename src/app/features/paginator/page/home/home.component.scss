@@ -4,6 +4,7 @@
   transition: background-color 0.3s, color 0.3s;
 
   &__dashboard {
-    background-color: var(--background-color-light);
+    background-color: var(--background-color-ligth);
+    border: 1px solid var(--border-color);
   }
 }

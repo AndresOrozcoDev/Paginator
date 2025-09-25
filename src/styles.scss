@@ -1,19 +1,21 @@
 :root {
-  --background-color: #f8f9fa;
-  --background-color-light:#ffffff;
-  --text-color: #000000;   
-  --primary-color: #0d6efd;
-  --button-bg: #0d6efd;
+  --background-color: rgba(249,250,251,1);
+  --background-color-ligth: #ffffff;
+  --text-color: #000000;
+  --button-background: #000000;
   --button-text: #ffffff;
+  --border-color: #dadcdf;
+  --head-color: #a1a1a1;
 }
 
 .dark-mode {
-  --background-color: #212529;
-  --background-color-light: #373839;
+  --background-color: #495057;
+  --background-color-ligth: #6c757d;
   --text-color: #ffffff;
-  --primary-color: #6c757d;
-  --button-bg: #6c757d;
+  --button-background: #3a3a3a;
   --button-text: #ffffff;
+  --border-color: #767e84;
+  --head-color: #000000;
 }
 
 * {
