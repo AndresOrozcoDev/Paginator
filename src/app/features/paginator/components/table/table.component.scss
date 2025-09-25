@@ -1,10 +1,14 @@
 table {
-    thead {
-        tr {
-            th {
-                background-color: var(--head-color);
-                color: var(--text-color);
-            }
-        }
+  thead, tbody {
+    tr {
+      background-color: var(--row-color);
+      color: var(--text-color);
+
+      th, td {
+        background-color: inherit; 
+        color: inherit;   
+        border: 1px solid var(--border-color);         
+      }
     }
+  }
 }
