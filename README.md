@@ -59,6 +59,11 @@ Run unit tests
     ng test
 ```
 
+Run unit tests with **coverage**
+```bash
+    ng test --no-watch --code-coverage
+```
+
 ## Deployments
 Generate the production build
 ```bash
