@@ -27,7 +27,6 @@ export class HomeComponent implements OnInit {
     this.locationService.getCities().subscribe({
       next: (data) => {
         this.cities = data;
-        console.log('Ciudades recibidos:', data);
       },
       error: (error) => console.error('Error obteniendo las ciudades', error)
     });
@@ -37,7 +36,6 @@ export class HomeComponent implements OnInit {
     this.locationService.getStates().subscribe({
       next: (data) => {
         this.states = data;
-        // console.log('Estados recibidos:', data);
       },
       error: (error) => console.error('Error obteniendo los estados', error)
     });
