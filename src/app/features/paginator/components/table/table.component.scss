@@ -1,13 +1,33 @@
+/* General */
 table {
   thead, tbody {
     tr {
-      background-color: var(--row-color);
-      color: var(--text-color);
-
       th, td {
         background-color: inherit; 
         color: inherit;   
-        border: 1px solid var(--border-color);         
+      }
+    }
+  }
+}
+
+/* Modo claro */
+:root table {
+  thead, tbody {
+    tr {
+      th, td {
+        border: 1px solid var(--border-color);
+      }
+    }
+  }
+}
+
+/* Modo oscuro */
+.dark-mode table {
+  thead, tbody {
+    tr {
+      th, td {
+        border: none;
+        border-bottom: 1px solid #fff;
       }
     }
   }

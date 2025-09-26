@@ -18,6 +18,52 @@
   --row-color: #6c757d;
 }
 
+:root table thead th,
+:root table tbody td {
+  border: 1px solid var(--border-color);
+}
+
+.dark-mode table thead th,
+.dark-mode table tbody td {
+  border: none;
+  border-bottom: 1px solid #fff;
+}
+
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('/assets/fonts/comfortaa/Comfortaa-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('/assets/fonts/comfortaa/Comfortaa-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('/assets/fonts/comfortaa/Comfortaa-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('/assets/fonts/comfortaa/Comfortaa-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('/assets/fonts/comfortaa/Comfortaa-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -29,4 +75,5 @@ html, body {
   height: 100%;
   background-color: var(--background-color);
   color: var(--text-color);
+  font-family: 'Comfortaa', sans-serif !important;
 }
