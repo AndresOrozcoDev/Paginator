@@ -64,6 +64,10 @@ Run unit tests with **coverage**
     ng test --no-watch --code-coverage
 ```
 
+![Unit test with coverage](./src//assets/images/test_covergae.png)
+
+*Figura 1: Screenshot of the unit tests showing up to 90% code coverage.*
+
 ## Deployments
 Generate the production build
 ```bash
