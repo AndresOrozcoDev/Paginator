@@ -21,7 +21,7 @@ A web application built with Angular that allows you to filter, paginate, and vi
 
 You can see the chat running in production here:
 
-👉 [Paginator]()
+👉 [Paginator](https://paginator-six.vercel.app/)
 
 Automatically deployed with [Vercel](https://vercel.com), using serverless functions for API endpoints.
 
