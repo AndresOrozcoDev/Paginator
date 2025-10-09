@@ -1,0 +1,26 @@
+<div class="filters mb-3">
+  
+  <form [formGroup]="formFilters" class="row g-3 align-items-end justify-content-between">
+
+    <div class="form-group col-12 col-md-auto flex-grow-1">
+      <label for="stateSelect">Estado:</label>
+      <select id="stateSelect" class="form-select" formControlName="state">
+        <option value="">Todos</option>
+        <option *ngFor="let state of states" [value]="state.id">
+          {{ state.state }}
+        </option>
+      </select>
+    </div>
+  
+    <div class="form-group col-12 col-md-auto flex-grow-1">
+      <label for="pageSizeSelect">Registros por página:</label>
+      <select id="pageSizeSelect" class="form-select" formControlName="pageSize" >
+        <option *ngFor="let size of [10, 20, 100]" [value]="size">
+          {{ size }}
+        </option>
+      </select>
+    </div>
+
+  </form>
+
+</div>
