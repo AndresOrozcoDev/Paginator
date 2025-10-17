@@ -8,6 +8,10 @@ import { LocationsService } from '../../services/locations.service';
 import { provideHttpClient } from '@angular/common/http';
 import { CitiesResponse, City, State, StatesResponse } from '../../types/location';
 import { of, throwError } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
+import { FiltersComponent } from '../../components/filters/filters.component';
+import { PaginationComponent } from '../../components/pagination/pagination.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -31,11 +35,20 @@ describe('HomeComponent', () => {
     mockLocationsService.getStates.and.returnValue(of([]));
 
     await TestBed.configureTestingModule({
-      declarations: [HomeComponent, HeaderComponent, TableComponent],
+      declarations: [HomeComponent, HeaderComponent, TableComponent, FiltersComponent, PaginationComponent],
+      imports: [ ReactiveFormsModule ],
       providers: [
         provideHttpClient(),
         provideHttpClientTesting(),
-        { provide: LocationsService, useValue: mockLocationsService }
+        { provide: LocationsService, useValue: mockLocationsService },
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            snapshot: { params: {} },
+            paramMap: of({ get: () => null }),
+            queryParams: of({})
+          }
+        }
       ]
     })
       .compileComponents();
