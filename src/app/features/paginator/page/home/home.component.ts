@@ -31,6 +31,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.getStates();
     this.watchQueryParams();
+    this.getCities();
   }
 
   private watchQueryParams(): void {
