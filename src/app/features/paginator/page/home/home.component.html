@@ -3,6 +3,6 @@
         <app-header class="mb-5"></app-header>
         <app-filters [states]="states" [initialFilters]="filters" (filterChange)="onFilterChange($event)"></app-filters>
         <app-table [cities]="cities"></app-table>
-        <app-pagination></app-pagination>
+        <app-pagination [totalPages]="pagination.totalPages" [currentPage]="filters.page" (pageChange)="onPageChange($event)"></app-pagination>
     </div>
 </div>

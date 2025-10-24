@@ -11,12 +11,22 @@ export interface City {
   city_dane_code: string;
 }
 
-export interface ApiResponse<T> {
-  success: boolean;
-  message: string;
-  data: T;
+export interface Pagination {
+  total: number;
+  totalPages: number;
+  page: number;
+  pageSize: number;
 }
 
-// Alias específicos para tipado más claro
-export type StatesResponse = ApiResponse<State[]>;
-export type CitiesResponse = ApiResponse<City[]>;
+export interface CitiesResponse {
+  success: boolean;
+  message: string;
+  data: City[];
+  pagination?: Pagination;
+}
+
+export interface StatesResponse {
+  success: boolean;
+  message: string;
+  data: State[];
+}

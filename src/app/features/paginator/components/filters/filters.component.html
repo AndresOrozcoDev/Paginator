@@ -15,7 +15,7 @@
     <div class="form-group col-12 col-md-auto flex-grow-1">
       <label for="pageSizeSelect">Registros por página:</label>
       <select id="pageSizeSelect" class="form-select" formControlName="pageSize" >
-        <option *ngFor="let size of [10, 20, 100]" [value]="size">
+        <option *ngFor="let size of [10, 20]" [value]="size">
           {{ size }}
         </option>
       </select>
