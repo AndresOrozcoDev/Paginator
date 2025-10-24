@@ -27,7 +27,7 @@ export class PaginationComponent implements OnChanges {
   }
 
   // Siempre mostrar primera página
-  pages.push(1);
+  pages.push(1,2);
 
   // Si hay más de 2 páginas, construimos el patrón < 1 ... current ... total >
   if (this.totalPages > 2) {
@@ -44,7 +44,7 @@ export class PaginationComponent implements OnChanges {
 
   // Si hay más de una página, mostrar la última
   if (this.totalPages > 1) {
-    pages.push(this.totalPages);
+    pages.push(this.totalPages - 1, this.totalPages);
   }
 
   this.pages = pages;
