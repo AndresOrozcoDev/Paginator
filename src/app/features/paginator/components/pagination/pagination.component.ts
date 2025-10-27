@@ -19,27 +19,36 @@ export class PaginationComponent implements OnChanges {
   }
 
   private generatePages(): void {
-    const pages: (number | string)[] = [];
+  const pages: (number | string)[] = [];
 
-    if (this.totalPages <= 5) {
-      for (let i = 1; i <= this.totalPages; i++) pages.push(i);
-    } else {
-      pages.push(1);
-
-      const start = Math.max(3, this.currentPage - 1);
-      const end = Math.min(this.totalPages - 2, this.currentPage + 1);
-
-      if (start > 3) pages.push('...');
-
-      for (let i = start; i <= end; i++) pages.push(i);
-
-      if (end < this.totalPages - 2) pages.push('...');
-
-      pages.push(this.totalPages);
-    }
-
-    this.pages = pages;
+  if (this.totalPages === 0) {
+    this.pages = [];
+    return;
   }
+
+  // Siempre mostrar primera página
+  pages.push(1,2);
+
+  // Si hay más de 2 páginas, construimos el patrón < 1 ... current ... total >
+  if (this.totalPages > 2) {
+    // Si la actual no es ni la primera ni la última
+    if (this.currentPage > 2 && this.currentPage < this.totalPages - 1) {
+      pages.push('...');
+      pages.push(this.currentPage);
+      pages.push('...');
+    } else {
+      // Si está al inicio o final, solo mostrar un separador
+      pages.push('...');
+    }
+  }
+
+  // Si hay más de una página, mostrar la última
+  if (this.totalPages > 1) {
+    pages.push(this.totalPages - 1, this.totalPages);
+  }
+
+  this.pages = pages;
+}
 
   changePage(page: number | string): void {
     if (typeof page === 'number' && page !== this.currentPage) {

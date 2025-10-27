@@ -57,6 +57,7 @@ export class HomeComponent implements OnInit {
 
     // Escucha cambios de parámetros
     this.watchQueryParams();
+    this.getCities();
   }
 
   /** Observa cambios en la URL y actualiza datos */
