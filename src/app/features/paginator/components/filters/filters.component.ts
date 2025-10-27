@@ -26,12 +26,21 @@ export class FiltersComponent implements OnInit {
       this.formFilters.patchValue(this.initialFilters, { emitEvent: false });
     }
 
-    this.formFilters.valueChanges
-      .pipe(
-        debounceTime(100),
-        distinctUntilChanged((a, b) => JSON.stringify(a) === JSON.stringify(b))
-      )
-      .subscribe(values => this.filterChange.emit(values));
+    // Escucha independiente para "state"
+    this.formFilters.get('state')!.valueChanges
+      .pipe(debounceTime(100), distinctUntilChanged())
+      .subscribe(state => this.filterChange.emit({
+        state,
+        pageSize: this.formFilters.get('pageSize')!.value
+      }));
+
+    // Escucha independiente para "pageSize"
+    this.formFilters.get('pageSize')!.valueChanges
+      .pipe(debounceTime(100), distinctUntilChanged())
+      .subscribe(pageSize => this.filterChange.emit({
+        state: this.formFilters.get('state')!.value,
+        pageSize
+      }));
   }
 
   private initForm(): void {
