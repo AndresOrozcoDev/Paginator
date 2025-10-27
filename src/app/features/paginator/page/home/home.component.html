@@ -1,8 +1,9 @@
 <div [class.dark-mode]="themeService.currentMode" class="main w-100 vh-100 flex-col p-3 p-md-5 overflow-auto">
     <div class="main__dashboard p-4 rounded d-flex flex-column">
         <app-header class="mb-5"></app-header>
-        <app-filters [states]="states" [initialFilters]="filters" (filterChange)="onFilterChange($event)"></app-filters>
+        <app-filters [states]="states"></app-filters>
         <app-table [cities]="cities"></app-table>
-        <app-pagination [totalPages]="pagination.totalPages" [currentPage]="filters.page" (pageChange)="onPageChange($event)"></app-pagination>
+        <app-pagination></app-pagination>
+
     </div>
 </div>
