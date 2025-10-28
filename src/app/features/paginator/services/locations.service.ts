@@ -2,6 +2,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import { CitiesResponse, CityFilters, StatesResponse, State } from '../types/location';
+import { environment } from '../../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -9,8 +10,7 @@ import { CitiesResponse, CityFilters, StatesResponse, State } from '../types/loc
 
 export class LocationsService {
 
-  // private baseUrl = 'http://localhost:3000/api/v2/location';
-  private baseUrl = 'https://api-lab-murex.vercel.app/api/v2/location';
+  private baseUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) { }
 
