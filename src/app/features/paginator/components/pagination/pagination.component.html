@@ -1,1 +1,39 @@
-<div class="pagination">Pagination</div>
+<nav *ngIf="pagination && pagination.totalPages > 1" aria-label="City pagination" class="mt-4">
+  <ul class="pagination justify-content-center mb-0">
+
+    <!-- Botón Anterior -->
+    <li class="page-item" [class.disabled]="pagination.currentPage === 1">
+      <button
+        class="page-link"
+        (click)="changePage(pagination.currentPage - 1)"
+        [disabled]="pagination.currentPage === 1"
+        aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </button>
+    </li>
+
+    <!-- Números de página -->
+    <li
+      *ngFor="let page of pages"
+      class="page-item"
+      [class.active]="page === pagination.currentPage">
+      <button
+        class="page-link"
+        (click)="changePage(page)">
+        {{ page }}
+      </button>
+    </li>
+
+    <!-- Botón Siguiente -->
+    <li class="page-item" [class.disabled]="pagination.currentPage === pagination.totalPages">
+      <button
+        class="page-link"
+        (click)="changePage(pagination.currentPage + 1)"
+        [disabled]="pagination.currentPage === pagination.totalPages"
+        aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </button>
+    </li>
+
+  </ul>
+</nav>

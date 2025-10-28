@@ -9,8 +9,8 @@ import { CitiesResponse, CityFilters, StatesResponse, State } from '../types/loc
 
 export class LocationsService {
 
-  // private baseUrl = 'http://localhost:3000/api/v2/location';
-  private baseUrl = 'https://api-lab-murex.vercel.app/api/v2/location';
+  private baseUrl = 'http://localhost:3000/api/v2/location';
+  // private baseUrl = 'https://api-lab-murex.vercel.app/api/v2/location';
 
   constructor(private http: HttpClient) { }
 

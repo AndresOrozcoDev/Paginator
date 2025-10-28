@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChild(FiltersComponent) filtersComponent!: FiltersComponent;
 
   private initialQueryParams: any;
+  pagination!: Pagination;
 
   constructor(
     private router: Router,
@@ -68,6 +69,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
       next: resp => {
         if (resp.success) {
           this.cities = resp.data;
+          this.pagination = resp.pagination;
         } else {
           console.warn('Backend message:', resp.message);
         }
@@ -108,6 +110,17 @@ export class HomeComponent implements OnInit, AfterViewInit {
         ...currentQueryParams,
         pageSize,
         page: 1
+      },
+      queryParamsHandling: 'merge'
+    });
+  }
+
+  onPageChanged(page: number): void {
+    const currentQueryParams = { ...this.route.snapshot.queryParams };
+    this.router.navigate([], {
+      queryParams: {
+        ...currentQueryParams,
+        page
       },
       queryParamsHandling: 'merge'
     });

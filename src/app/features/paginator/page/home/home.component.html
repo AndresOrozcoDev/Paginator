@@ -2,11 +2,15 @@
     <div class="main__dashboard p-4 rounded d-flex flex-column">
         <app-header class="mb-5"></app-header>
         <app-filters 
-            [states]="states"
+            [states]="states" 
             (stateChanged)="onStateChanged($event)"
             (pageSizeChanged)="onPageSizeChanged($event)"></app-filters>
         <app-table [cities]="cities"></app-table>
-        <app-pagination></app-pagination>
+        <app-pagination 
+            *ngIf="pagination" 
+            [pagination]="pagination" 
+            (pageChanged)="onPageChanged($event)">
+        </app-pagination>
 
     </div>
 </div>

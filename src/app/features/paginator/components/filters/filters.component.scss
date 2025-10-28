@@ -1,10 +1,8 @@
 .filters {
-    form {
-        .form-group {
-            .form-select {
-                background-color: var(--background-color);
-                color: var(--text-color);
-            }
+    .form-group {
+        .form-select {
+            background-color: var(--background-color);
+            color: var(--text-color);
         }
     }
 }

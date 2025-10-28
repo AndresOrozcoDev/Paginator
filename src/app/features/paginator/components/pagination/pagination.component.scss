@@ -1,0 +1,36 @@
+.page-item {
+    .page-link {
+        color: var(--text-color);
+        background-color: var(--background-color-ligth);
+        cursor: pointer;
+        border-radius: 6px;
+        margin-inline: 3px;
+
+        &:hover {
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        &:focus,
+        &:focus-visible,
+        &:active {
+            outline: none !important;
+            box-shadow: none !important;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        &:disabled,
+        &.disabled {
+            opacity: 0.6;
+            cursor: not-allowed !important;
+            pointer-events: auto;
+        }
+    }
+
+    &.active .page-link {
+        background-color: var(--background-color);
+        color: var(--text-color);
+        border-color: var(--border-color);
+    }
+}
