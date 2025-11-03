@@ -71,7 +71,7 @@ Run unit tests with **coverage**
 ## Deployments
 Generate the production build
 ```bash
-    ng build
+    ng build --configuration production
 ```
 
 ---
