@@ -11,9 +11,18 @@
   <img src="https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel" />
   <img src="https://img.shields.io/badge/status-in%20development-yellow" />
   <img src="https://img.shields.io/badge/license-MIT-blue" />
+  <a href="https://deepwiki.com/AndresOrozcoDev/Paginator"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
 </p>
 
 A web application built with Angular that allows you to filter, paginate, and visualize large volumes of data efficiently and responsively.
+
+---
+
+## DeepWiki Documentation
+
+You can see the DeepWiki oficial documentacion here:
+
+[DeepWiki](https://deepwiki.com/AndresOrozcoDev/Paginator)
 
 ---
 
