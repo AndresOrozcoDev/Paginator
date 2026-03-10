@@ -11,9 +11,26 @@
   <img src="https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel" />
   <img src="https://img.shields.io/badge/status-in%20development-yellow" />
   <img src="https://img.shields.io/badge/license-MIT-blue" />
+  <a href="https://deepwiki.com/AndresOrozcoDev/Paginator"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
 </p>
 
 A web application built with Angular that allows you to filter, paginate, and visualize large volumes of data efficiently and responsively.
+
+---
+
+## DeepWiki Documentation
+
+You can see the DeepWiki oficial documentacion here:
+
+[DeepWiki](https://deepwiki.com/AndresOrozcoDev/Paginator)
+
+---
+
+## Mintlify Documentation
+
+You can see the Mintlify oficial documentacion here:
+
+[Mintlify](https://andresorozcodev-paginator.mintlify.app/quickstart)
 
 ---
 
@@ -80,7 +97,7 @@ Generate the production build
 
 Developed with 💙 by [Andrés Orozco](https://github.com/AndresOrozcoDev)
 
-- 📬 [andresorozcodev@gmail.com](mailto:andresorozcodev@gmail.com)
+- 📬 [andres.orozco.dev@gmail.com](mailto:andres.orozco.dev@gmail.com)
 - 🌐 [LinkedIn](https://www.linkedin.com/in/andresorozcodev)
 
 ---
