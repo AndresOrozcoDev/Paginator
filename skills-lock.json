@@ -1,6 +1,11 @@
 {
   "version": 1,
   "skills": {
+    "angular-best-practices": {
+      "source": "alfredoperez/angular-best-practices",
+      "sourceType": "github",
+      "computedHash": "a374af88ef90921a10130614e3c4861e1aab99a5c29b089e599618fef3ba4fca"
+    },
     "angular-component": {
       "source": "analogjs/angular-skills",
       "sourceType": "github",
