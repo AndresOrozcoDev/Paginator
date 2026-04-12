@@ -93,6 +93,14 @@ Generate the production build
 
 ---
 
+## Angular Documentation
+
+This project was built with **Angular 19.1.0**. You can find the official documentation for this version here:
+
+[Angular 19 Official Docs](https://v19.angular.dev/overview)
+
+---
+
 ## 👨‍💻 Author
 
 Developed with 💙 by [Andrés Orozco](https://github.com/AndresOrozcoDev)
